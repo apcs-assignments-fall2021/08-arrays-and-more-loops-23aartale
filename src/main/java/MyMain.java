@@ -35,10 +35,10 @@ public class MyMain {
     // Replaces all duplicate values with -1
     // Ex. duplicateReplacer([1, 2, 1, 2, 1, 1]) => [1, 2, -1, -1, -1, -1]
     public static int[] duplicateReplacer(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 1 ; j < arr.length; j++) {
-                if (arr[j] == (arr[i])) {
-                    arr[j] = -1;
+        for (int j = 0; j < arr.length; j++) {
+            for (int i = 0 ; i < arr.length; i++) {
+                if (arr[j] == arr[i] && j!=i){
+                    arr[i] = -1;
                 }
             }
         }
